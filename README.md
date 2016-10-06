@@ -10,4 +10,13 @@
 
 ### チーム
 
-TBD
+#### pecoチーム
+
+* kymmt
+* qkake
+* nakamu
+
+#### ryucheruチーム
+
+* numacchi
+* takapi
