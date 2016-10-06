@@ -10,4 +10,4 @@ end
 
 phrase = ARGV[0]
 exit if phrase.nil?
-p typoglycemia(PHRASE)
+p typoglycemia(phrase)
