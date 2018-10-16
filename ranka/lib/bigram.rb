@@ -3,7 +3,7 @@
 # 文字列・配列が空白だとエラーを返す。
 #
 # @author tosite
-# @param  [string || String] str
+# @param  [Array || String] str
 # @return Array
 # @see http://gihyo.jp/dev/serial/01/make-findspot/0005 / bi-gramについて
 # @example
