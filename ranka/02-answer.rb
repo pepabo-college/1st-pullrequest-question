@@ -1,12 +1,12 @@
 buf1 = 'パトカー'
 buf2 = 'タクシー'
-ans = ''
+ans  = ''
 
 arr1 = buf1.split('')
 arr2 = buf2.split('')
 
 # ループ回数の上限を取得
-cnt = (arr1.length >= arr2.length) ? arr1.length : arr2.length
+cnt = [arr1.length, arr2.length].max
 
 for i in 0..cnt
   s1 = (!arr1[i].nil?) ? arr1[i] : ''
