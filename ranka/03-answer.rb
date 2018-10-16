@@ -1,17 +1,15 @@
-buf1 = 'パトカー'
-buf2 = 'タクシー'
-ans = ''
+buf      = 'Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics.'
+ans      = ''
+# 無効な文字の消去
+replaced = buf.gsub(/[,.!?]/, '')
+arr      = replaced.split(' ')
 
-arr1 = buf1.split('')
-arr2 = buf2.split('')
-
-# ループ回数の上限を取得
-cnt = (arr1.length >= arr2.length) ? arr1.length : arr2.length
-
-for i in 0..cnt
-  s1 = (!arr1[i].nil?) ? arr1[i] : ''
-  s2 = (!arr2[i].nil?) ? arr2[i] : ''
-  ans += s1 + s2
+arr.each do |b|
+  ans += "#{b.length}, "
 end
 
-puts ans
+# 末尾のカンマの削除
+len = ans.length
+ans.slice!(len - 2, 2)
+
+puts "[#{ans}]"
