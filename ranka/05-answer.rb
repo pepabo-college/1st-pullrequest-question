@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require "./lib/bigram"
 
-buf = 'I am an NLPer'
-# splited  = buf.split(' ')
-# replaced = buf.gsub(/ /, '')
+buf = "I am an NLPer"
+# splited  = buf.split(" ")
+# replaced = buf.gsub(/ /, "")
 
 puts "単語："
 puts get_bi_gram_by_word buf

@@ -1,8 +1,11 @@
-buf       = 'Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can.'
+# frozen_string_literal: true
+
+buf       = "Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations "\
+            "Might Also Sign Peace Security Clause. Arthur King Can."
 one_chars = [1, 5, 6, 7, 8, 9, 15, 16, 19]
 # 無効な文字の消去
-replaced = buf.gsub(/[,.!?]/, '')
-arr      = replaced.split(' ')
+replaced = buf.gsub(/[,.!?]/, "")
+arr      = replaced.split(" ")
 
 ans = {}
 arr.each_with_index do |b, i|

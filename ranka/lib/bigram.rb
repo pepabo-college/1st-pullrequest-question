@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # get_bi_gram 関数
 # 与えられた引数をbi-gram形式に変換する。
 # 文字列・配列が空白だとエラーを返す。
@@ -20,12 +22,12 @@ def get_bi_gram(str)
   for i in 0..(cnt - 2)
     ans[i] = "#{str[i]}#{str[i + 1]}"
   end
-  return ans
+  ans
 end
 
 # get_bi_gram_by_letter 関数
 # 与えられた文字列を文字レベルでbi-gram形式に変換する。
-# 
+#
 # @author tosite
 # @param [String] str
 # @return Array
@@ -33,13 +35,13 @@ end
 #   get_bi_gram_by_letter("I am an NLPer")
 #   # => [Ia, am, ma, an, nN, NL, LP, Pe, er, r]
 def get_bi_gram_by_letter(str)
-  tmp = str.gsub(/ /, '')
-  return get_bi_gram tmp
+  tmp = str.gsub(/ /, "")
+  get_bi_gram tmp
 end
 
 # get_bi_gram_by_letter 関数
 # 与えられた文字列を単語レベルでbi-gram形式に変換する。
-# 
+#
 # @author tosite
 # @param [String] str
 # @return Array
@@ -47,6 +49,6 @@ end
 #   get_bi_gram_by_word("I am an NLPer")
 #   # => [Iam, aman, anNLPer, NLPer]
 def get_bi_gram_by_word(str)
-  tmp = str.split(' ')
-  return get_bi_gram tmp
+  tmp = str.split(" ")
+  get_bi_gram tmp
 end

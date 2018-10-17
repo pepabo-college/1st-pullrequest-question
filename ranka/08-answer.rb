@@ -1,4 +1,6 @@
-require './lib/cipher'
+# frozen_string_literal: true
+
+require "./lib/cipher"
 buf = "I'm 1234 Integer."
 encode_str = cipher(buf)
 decode_str = cipher(encode_str)

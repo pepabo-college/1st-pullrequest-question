@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # rand_char 関数
 # 配列の先頭と末尾を除いたランダムなインデックスを生成する。
 #
@@ -14,22 +16,22 @@ def rand_char(arr, max_len)
   for i in 1..(max_len - 1)
     res.push(i)
   end
-  return res.shuffle!
+  res.shuffle!
 end
 
 buf = "I couldn't believe that I could actually understand what I was reading : the phenomenal power of the human mind ."
-ans = ''
-arr = buf.split(' ')
+ans = ""
+arr = buf.split(" ")
 
-arr.each_with_index do |b,i|
-  tmp = ''
+arr.each_with_index do |b, i|
+  tmp = ""
   ans += " "
   # 文字数が4文字以下なら入れ替えない
   if b.length <= 4
     ans += b
     next
   end
-  chars   = b.split('')
+  chars   = b.split("")
   max_len = chars.length - 1
   rand_char(chars, max_len).each do |idx|
     tmp += chars[idx]
