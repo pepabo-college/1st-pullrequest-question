@@ -23,11 +23,13 @@ buf = "I couldn't believe that I could actually understand what I was reading : 
 ans = ""
 arr = buf.split(" ")
 
+r = []
 arr.each_with_index do |b, i|
   tmp = ""
   ans += " "
   # 文字数が4文字以下なら入れ替えない
   if b.length <= 4
+    r.push(b)
     ans += b
     next
   end
@@ -36,7 +38,8 @@ arr.each_with_index do |b, i|
   rand_char(chars, max_len).each do |idx|
     tmp += chars[idx]
   end
-  ans += "#{chars[0]}#{tmp}#{chars[max_len]}"
+  ans = "#{chars[0]}#{tmp}#{chars[max_len]}"
+  r.push(ans)
 end
 
-puts ans
+puts r.join(" ")
